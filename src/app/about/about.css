@@ -1,0 +1,118 @@
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 250vh;
+  overflow: hidden;
+  background-color: var(--base-500);
+}
+
+.about-hero-pin {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100vh;
+  padding: 2.5rem;
+}
+
+.hero-heading {
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-heading h1 {
+  font-size: clamp(4rem, 10vw, 20rem);
+  will-change: transform;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 0.35rem;
+  aspect-ratio: 16 / 9;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.hero-image img {
+  transform-origin: center;
+  will-change: transform;
+}
+
+.about-info {
+  padding: 2rem 0 8rem 0;
+  background-color: var(--base-500);
+}
+
+.about-info .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-info .container p,
+.about-info .container h3 {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .about-hero {
+    height: 175vh;
+  }
+
+  .about-hero-pin {
+    padding: 1.5rem;
+  }
+
+  .hero-heading h1 {
+    font-size: clamp(3rem, 12vw, 8rem);
+  }
+
+  .hero-image {
+    max-width: 85%;
+  }
+
+  .about-info {
+    padding: 1.5rem 0 5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: 150vh;
+  }
+
+  .about-hero-pin {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .hero-image {
+    max-width: 95%;
+  }
+
+  .about-info .container p,
+  .about-info .container h3 {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .about-hero {
+    height: 300vh;
+  }
+
+  .about-hero-pin {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .hero-image {
+    max-width: 45%;
+  }
+}
