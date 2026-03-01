@@ -11,6 +11,7 @@ import StickyCards from "@/components/StickyCards/StickyCards";
 import Chefs from "@/components/Chefs/Chefs";
 import CTA from "@/components/CTA/CTA";
 
+import { ap } from "@/lib/assetPath";
 import "./about.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -144,7 +145,7 @@ export default function About() {
           </div>
 
           <div className="hero-image">
-            <img src="/about/about-hero.jpg" alt="About Sids Kitchen" />
+            <img src={ap("/about/about-hero.jpg")} alt="About Sids Kitchen" />
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 
+import { ap } from "@/lib/assetPath";
 import "./Chefs.css";
 
 const MOBILE_BREAKPOINT = 1000;
@@ -199,7 +200,7 @@ const Chefs = () => {
             key={index}
             ref={(el) => (avatarRefs.current[index] = el)}
           >
-            <img src={chef.image} alt={chef.name} />
+            <img src={ap(chef.image)} alt={chef.name} />
           </div>
         ))}
       </div>

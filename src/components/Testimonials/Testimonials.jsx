@@ -8,6 +8,7 @@ import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
 import { testimonials } from "./testimonials-data";
 import Copy from "@/components/Copy/Copy";
 
+import { ap } from "@/lib/assetPath";
 import "./Testimonials.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -241,7 +242,7 @@ const Testimonials = () => {
               <div className="testimonial-author">
                 <div className="testimonial-author-img">
                   <img
-                    src={testimonial.profilePicture}
+                    src={ap(testimonial.profilePicture)}
                     alt={testimonial.name}
                   />
                 </div>

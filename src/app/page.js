@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 import CTA from "@/components/CTA/CTA";
 import ImageBanner from "@/components/ImageBanner/ImageBanner";
 
+import { ap } from "@/lib/assetPath";
 import "./home.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -70,7 +71,7 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-img">
-          <img src="/home/hero.jpg" alt="" />
+          <img src={ap("/home/hero.jpg")} alt="" />
         </div>
 
         <div className="container">
@@ -132,7 +133,7 @@ export default function Home() {
                 className="about-img"
                 id={`about-img-${index + 1}`}
               >
-                <img src={`/home/about-${index + 1}.jpg`} alt="" />
+                <img src={ap(`/home/about-${index + 1}.jpg`)} alt="" />
               </div>
             ))}
           </div>

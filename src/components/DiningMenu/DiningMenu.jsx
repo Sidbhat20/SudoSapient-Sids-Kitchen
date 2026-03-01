@@ -8,6 +8,7 @@ import { HiOutlineArrowUp, HiOutlineArrowDown } from "react-icons/hi";
 import { diningMenu } from "./diningMenu-data";
 import Copy from "@/components/Copy/Copy";
 
+import { ap } from "@/lib/assetPath";
 import "./DiningMenu.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -77,7 +78,7 @@ const DiningMenu = () => {
   return (
     <section className="dining-menu" ref={sectionRef}>
       <div className="dining-menu-bg">
-        <img src="/dining-menu/dining-menu.jpg" alt="" />
+        <img src={ap("/dining-menu/dining-menu.jpg")} alt="" />
       </div>
 
       <div className="container">
@@ -166,9 +167,9 @@ const DiningMenu = () => {
               >
                 <div className="dining-minimap-img">
                   <img
-                    src={`/dining-menu/dining-menu-${menu.category
+                    src={ap(`/dining-menu/dining-menu-${menu.category
                       .toLowerCase()
-                      .replaceAll(" ", "-")}.jpg`}
+                      .replaceAll(" ", "-")}.jpg`)}
                     alt={menu.category}
                   />
                 </div>

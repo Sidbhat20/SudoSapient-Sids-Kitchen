@@ -1,5 +1,6 @@
 import Copy from "../Copy/Copy";
 
+import { ap } from "@/lib/assetPath";
 import "./ImageBanner.css";
 
 const ImageBanner = ({
@@ -10,7 +11,7 @@ const ImageBanner = ({
   return (
     <section className="image-banner">
       <div className="image-banner-bg">
-        <img src={image} alt="" />
+        <img src={ap(image)} alt="" />
       </div>
 
       <div className="container">

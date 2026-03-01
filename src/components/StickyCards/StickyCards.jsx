@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { ap } from "@/lib/assetPath";
 import "./StickyCards.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -128,7 +129,7 @@ const StickyCards = () => {
       {CARDS.map((card, index) => (
         <div className="sticky-card" key={index}>
           <div className="sticky-card-img">
-            <img src={card.image} alt={card.title} />
+            <img src={ap(card.image)} alt={card.title} />
           </div>
           <h3>{card.title}</h3>
           <p>{card.description}</p>

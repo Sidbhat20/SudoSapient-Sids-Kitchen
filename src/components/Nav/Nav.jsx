@@ -7,6 +7,7 @@ import gsap from "gsap";
 
 import { useViewTransition } from "@/hooks/useViewTransition";
 
+import { ap } from "@/lib/assetPath";
 import "./Nav.css";
 
 const NAV_LINKS = [
@@ -70,7 +71,7 @@ export default function Nav({ pageRef }) {
     if (!container) return;
     container.innerHTML = "";
     const defaultImg = document.createElement("img");
-    defaultImg.src = NAV_LINKS[0].img;
+    defaultImg.src = ap(NAV_LINKS[0].img);
     container.appendChild(defaultImg);
   }
 
@@ -261,7 +262,7 @@ export default function Nav({ pageRef }) {
       return;
 
     const newImg = document.createElement("img");
-    newImg.src = imageSrc;
+    newImg.src = ap(imageSrc);
     newImg.style.opacity = "0";
     newImg.style.transform = "scale(1.25) rotate(10deg)";
     container.appendChild(newImg);
@@ -313,7 +314,7 @@ export default function Nav({ pageRef }) {
           <div className="nav-menu-items">
             <div className="nav-col-lg">
               <div className="nav-preview-img" ref={previewImageRef}>
-                <img src={NAV_LINKS[0].img} alt="" />
+                <img src={ap(NAV_LINKS[0].img)} alt="" />
               </div>
             </div>
 

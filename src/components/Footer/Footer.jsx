@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "@/components/Button/Button";
 import Copy from "@/components/Copy/Copy";
 
+import { ap } from "@/lib/assetPath";
 import "./Footer.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -135,7 +136,7 @@ const Footer = () => {
       <div className="footer-postcards">
         {POSTCARDS.map((card, index) => (
           <div className="footer-postcard" key={index}>
-            <img src={card.image} alt="Sids Kitchen" />
+            <img src={ap(card.image)} alt="Sids Kitchen" />
           </div>
         ))}
       </div>

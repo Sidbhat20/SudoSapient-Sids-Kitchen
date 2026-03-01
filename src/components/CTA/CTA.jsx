@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Copy from "@/components/Copy/Copy";
 
+import { ap } from "@/lib/assetPath";
 import "./CTA.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -170,7 +171,7 @@ const CTA = () => {
         </div>
 
         <div className="cta-image">
-          <img src="/cta/cta-img.jpg" alt="Restaurant interior" />
+          <img src={ap("/cta/cta-img.jpg")} alt="Restaurant interior" />
         </div>
       </div>
     </section>
